@@ -72,7 +72,6 @@ unique template rpms/php;
 "/software/packages"=pkg_repl("libgcrypt","1.4.5-9.el6_2.2","x86_64");
 "/software/packages"=pkg_repl("libgpg-error","1.7-4.el6","x86_64");
 "/software/packages"=pkg_repl("libidn","1.18-2.el6","x86_64");
-"/software/packages"=pkg_repl("libjpeg","6b-46.el6","x86_64");
 "/software/packages"=pkg_repl("libjpeg-turbo","1.2.1-1.el6","x86_64");
 "/software/packages"=pkg_repl("libnih","1.0.1-7.el6","x86_64");
 "/software/packages"=pkg_repl("libpng","1.2.49-1.el6_2","x86_64");

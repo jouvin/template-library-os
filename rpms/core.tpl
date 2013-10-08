@@ -30,7 +30,7 @@ unique template rpms/core;
 "/software/packages"=pkg_repl("cracklib","2.8.16-4.el6","x86_64");
 "/software/packages"=pkg_repl("cracklib-dicts","2.8.16-4.el6","x86_64");
 "/software/packages"=pkg_repl("cronie","1.4.4-7.el6","x86_64");
-"/software/packages"=pkg_repl("cronie-anacron","1.4.4-7.el6","x86_64");
+"/software/packages"=pkg_repl("cronie-noanacron","1.4.4-7.el6","x86_64");
 "/software/packages"=pkg_repl("crontabs","1.10-33.el6","noarch");
 "/software/packages"=pkg_repl("curl","7.19.7-35.el6","x86_64");
 "/software/packages"=pkg_repl("cyrus-sasl","2.1.23-13.el6_3.1","x86_64");
@@ -45,8 +45,6 @@ unique template rpms/core;
 "/software/packages"=pkg_repl("diffutils","2.8.1-28.el6","x86_64");
 "/software/packages"=pkg_repl("dracut","004-303.el6","noarch");
 "/software/packages"=pkg_repl("dracut-fips","004-303.el6","noarch");
-# Added manually cos groups for some reason left it out - dependency of kernel
-"/software/packages"=pkg_repl("dracut-kernel","004-303.el6","noarch");
 "/software/packages"=pkg_repl("dracut-network","004-303.el6","noarch");
 "/software/packages"=pkg_repl("e2fsprogs","1.41.12-14.el6","x86_64");
 "/software/packages"=pkg_repl("e2fsprogs-libs","1.41.12-14.el6","x86_64");
@@ -72,9 +70,8 @@ unique template rpms/core;
 "/software/packages"=pkg_repl("grep","2.6.3-3.el6","x86_64");
 "/software/packages"=pkg_repl("groff","1.18.1.4-21.el6","x86_64");
 "/software/packages"=pkg_repl("grub","0.97-81.el6","x86_64");
-# Added manually cos groups for some reason left it out - dependency of kernel
-"/software/packages"=pkg_repl("grubby","7.0.15-3.el6","x86_64");
 "/software/packages"=pkg_repl("gzip","1.3.12-18.el6","x86_64");
+"/software/packages"=pkg_repl("hesiod","3.1.0-19.el6","x86_64");
 "/software/packages"=pkg_repl("hmaccalc","0.9.12-1.el6","x86_64");
 "/software/packages"=pkg_repl("hwdata","0.233-7.9.el6","noarch");
 "/software/packages"=pkg_repl("info","4.13a-8.el6","x86_64");
@@ -98,18 +95,7 @@ unique template rpms/core;
 "/software/packages"=pkg_repl("iwl6050-firmware","41.28.5.1-2.el6","noarch");
 "/software/packages"=pkg_repl("kbd","1.15-11.el6","x86_64");
 "/software/packages"=pkg_repl("kbd-misc","1.15-11.el6","noarch");
-# PKG_KERNEL_NAME can be overridden if not conforming to standard naming scheme
-variable PKG_KERNEL_NAME ?= 'kernel';
-# PKG_KERNEL_RPM_NAME can be overridden if not conforming to standard naming scheme
-variable PKG_KERNEL_RPM_NAME ?= {
-  rpmname = PKG_KERNEL_NAME;
-  if ( length(KERNEL_VARIANT) > 0 ) {
-    rpmname = rpmname + '-' + KERNEL_VARIANT;
-  };
-  rpmname;
-};
-"/software/packages"=pkg_add(PKG_KERNEL_RPM_NAME,KERNEL_VERSION_NUM,PKG_ARCH_KERNEL,"multi");
-"/software/packages"=pkg_repl("kernel-firmware",KERNEL_VERSION_NUM,"noarch");
+"/software/packages"=pkg_repl("kernel-firmware","2.6.32-358.el6","noarch");
 "/software/packages"=pkg_repl("keyutils","1.4-4.el6","x86_64");
 "/software/packages"=pkg_repl("keyutils-libs","1.4-4.el6","x86_64");
 "/software/packages"=pkg_repl("krb5-libs","1.10.3-10.el6","x86_64");
@@ -180,6 +166,7 @@ variable PKG_KERNEL_RPM_NAME ?= {
 "/software/packages"=pkg_repl("policycoreutils","2.0.83-19.30.el6","x86_64");
 "/software/packages"=pkg_repl("popt","1.13-7.el6","x86_64");
 "/software/packages"=pkg_repl("postfix","2.6.6-2.2.el6_1","x86_64");
+"/software/packages"=pkg_repl("procmail","3.22-25.1.el6","x86_64");
 "/software/packages"=pkg_repl("procps","3.2.8-25.el6","x86_64");
 "/software/packages"=pkg_repl("psmisc","22.6-15.el6_0.1","x86_64");
 "/software/packages"=pkg_repl("pth","2.0.7-9.3.el6","x86_64");
@@ -207,6 +194,7 @@ variable PKG_KERNEL_RPM_NAME ?= {
 "/software/packages"=pkg_repl("sed","4.2.1-10.el6","x86_64");
 "/software/packages"=pkg_repl("selinux-policy","3.7.19-195.el6","noarch");
 "/software/packages"=pkg_repl("selinux-policy-targeted","3.7.19-195.el6","noarch");
+"/software/packages"=pkg_repl("sendmail","8.14.4-8.el6","x86_64");
 "/software/packages"=pkg_repl("setup","2.8.14-20.el6","noarch");
 "/software/packages"=pkg_repl("shadow-utils","4.1.4.2-13.el6","x86_64");
 "/software/packages"=pkg_repl("sl-release","6.4-1","x86_64");

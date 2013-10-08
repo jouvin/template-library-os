@@ -7,8 +7,6 @@ unique template rpms/hardware_monitoring;
 
 
 "/software/packages"=pkg_repl("MAKEDEV","3.24-6.el6","x86_64");
-"/software/packages"=pkg_repl("amanda","2.6.1p2-8.el6","x86_64");
-"/software/packages"=pkg_repl("amanda-client","2.6.1p2-8.el6","x86_64");
 "/software/packages"=pkg_repl("audit-libs","2.2-2.el6","x86_64");
 "/software/packages"=pkg_repl("basesystem","10.0-4.el6","noarch");
 "/software/packages"=pkg_repl("bash","4.1.2-14.el6","x86_64");
@@ -119,14 +117,11 @@ unique template rpms/hardware_monitoring;
 "/software/packages"=pkg_repl("sqlite","3.6.20-1.el6","x86_64");
 "/software/packages"=pkg_repl("sysfsutils","2.1.0-7.el6","x86_64");
 "/software/packages"=pkg_repl("sysvinit-tools","2.87-4.dsf.el6","x86_64");
-"/software/packages"=pkg_repl("tar","1.23-11.el6","x86_64");
-"/software/packages"=pkg_repl("tcp_wrappers-libs","7.6-57.el6","x86_64");
 "/software/packages"=pkg_repl("tzdata","2012j-1.el6","noarch");
 "/software/packages"=pkg_repl("udev","147-2.46.el6","x86_64");
 "/software/packages"=pkg_repl("upstart","0.6.5-12.el6","x86_64");
 "/software/packages"=pkg_repl("ustr","1.0.4-9.1.el6","x86_64");
 "/software/packages"=pkg_repl("util-linux-ng","2.17.2-12.9.el6","x86_64");
-"/software/packages"=pkg_repl("xinetd","2.3.14-38.el6","x86_64");
 "/software/packages"=pkg_repl("xz-libs","4.999.9-0.3.beta.20091007git.el6","x86_64");
 "/software/packages"=pkg_repl("zlib","1.2.3-29.el6","x86_64");
 

@@ -21,8 +21,6 @@ unique template rpms/base;
 "/software/packages"=pkg_repl("acpid","1.0.10-2.1.el6","x86_64");
 "/software/packages"=pkg_repl("alsa-lib","1.0.22-3.el6","x86_64");
 "/software/packages"=pkg_repl("alsa-utils","1.0.22-5.el6","x86_64");
-"/software/packages"=pkg_repl("amanda","2.6.1p2-8.el6","x86_64");
-"/software/packages"=pkg_repl("amanda-client","2.6.1p2-8.el6","x86_64");
 "/software/packages"=pkg_repl("at","3.1.10-43.el6_2.1","x86_64");
 "/software/packages"=pkg_repl("atk","1.28.0-2.el6","x86_64");
 "/software/packages"=pkg_repl("audispd-plugins","2.2-2.el6","x86_64");
@@ -152,7 +150,7 @@ unique template rpms/base;
 "/software/packages"=pkg_repl("kbd","1.15-11.el6","x86_64");
 "/software/packages"=pkg_repl("kbd-misc","1.15-11.el6","noarch");
 # PKG_KERNEL_NAME can be overridden if not conforming to standard naming scheme
-variable PKG_KERNEL_NAME ?= 'kernel';
+variable PKG_KERNEL_NAME ?= 'kernel'; 
 # PKG_KERNEL_RPM_NAME can be overridden if not conforming to standard naming scheme
 variable PKG_KERNEL_RPM_NAME ?= {
   rpmname = PKG_KERNEL_NAME;
@@ -162,7 +160,8 @@ variable PKG_KERNEL_RPM_NAME ?= {
   rpmname;
 };
 "/software/packages"=pkg_add(PKG_KERNEL_RPM_NAME,KERNEL_VERSION_NUM,PKG_ARCH_KERNEL,"multi");
-"/software/packages"=pkg_repl("kernel-firmware",KERNEL_VERSION_NUM,"noarch");
+"/software/packages"=pkg_repl("kernel-doc","2.6.32-358.el6","noarch");
+"/software/packages"=pkg_repl("kernel-firmware","2.6.32-358.el6","noarch");
 "/software/packages"=pkg_repl("kexec-tools","2.0.0-258.el6","x86_64");
 "/software/packages"=pkg_repl("keyutils","1.4-4.el6","x86_64");
 "/software/packages"=pkg_repl("keyutils-libs","1.4-4.el6","x86_64");
@@ -200,7 +199,6 @@ variable PKG_KERNEL_RPM_NAME ?= {
 "/software/packages"=pkg_repl("libgcrypt","1.4.5-9.el6_2.2","x86_64");
 "/software/packages"=pkg_repl("libgpg-error","1.7-4.el6","x86_64");
 "/software/packages"=pkg_repl("libidn","1.18-2.el6","x86_64");
-"/software/packages"=pkg_repl("libjpeg","6b-46.el6","x86_64");
 "/software/packages"=pkg_repl("libjpeg-turbo","1.2.1-1.el6","x86_64");
 "/software/packages"=pkg_repl("libnih","1.0.1-7.el6","x86_64");
 "/software/packages"=pkg_repl("libnl","1.1-14.el6","x86_64");
@@ -414,7 +412,6 @@ variable PKG_KERNEL_RPM_NAME ?= {
 "/software/packages"=pkg_repl("words","3.0-17.el6","noarch");
 "/software/packages"=pkg_repl("x86info","1.25-1.32.el6","x86_64");
 "/software/packages"=pkg_repl("xdg-utils","1.0.2-17.20091016cvs.el6","noarch");
-"/software/packages"=pkg_repl("xinetd","2.3.14-38.el6","x86_64");
 "/software/packages"=pkg_repl("xmlrpc-c","1.16.24-1209.1840.el6","x86_64");
 "/software/packages"=pkg_repl("xmlrpc-c-client","1.16.24-1209.1840.el6","x86_64");
 "/software/packages"=pkg_repl("xz","4.999.9-0.3.beta.20091007git.el6","x86_64");

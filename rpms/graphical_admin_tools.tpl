@@ -30,8 +30,6 @@ unique template rpms/graphical_admin_tools;
 "/software/packages"=pkg_repl("abrt-libs","2.0.8-15.el6","x86_64");
 "/software/packages"=pkg_repl("acl","2.2.49-6.el6","x86_64");
 "/software/packages"=pkg_repl("alsa-lib","1.0.22-3.el6","x86_64");
-"/software/packages"=pkg_repl("amanda","2.6.1p2-8.el6","x86_64");
-"/software/packages"=pkg_repl("amanda-client","2.6.1p2-8.el6","x86_64");
 "/software/packages"=pkg_repl("anaconda","13.21.195-1.sl6","x86_64");
 "/software/packages"=pkg_repl("anaconda-yum-plugins","1.0-5.1.el6","noarch");
 "/software/packages"=pkg_repl("atk","1.28.0-2.el6","x86_64");
@@ -192,8 +190,18 @@ unique template rpms/graphical_admin_tools;
 "/software/packages"=pkg_repl("jasper-libs","1.900.1-15.el6_1.1","x86_64");
 "/software/packages"=pkg_repl("kbd","1.15-11.el6","x86_64");
 "/software/packages"=pkg_repl("kbd-misc","1.15-11.el6","noarch");
-"/software/packages"=pkg_repl("kernel-debug",KERNEL_VERSION_NUM,"x86_64");
-"/software/packages"=pkg_repl("kernel-firmware",KERNEL_VERSION_NUM,"noarch");
+# PKG_KERNEL_NAME can be overridden if not conforming to standard naming scheme
+variable PKG_KERNEL_NAME ?= 'kernel'; 
+# PKG_KERNEL_RPM_NAME can be overridden if not conforming to standard naming scheme
+variable PKG_KERNEL_RPM_NAME ?= {
+  rpmname = PKG_KERNEL_NAME;
+  if ( length(KERNEL_VARIANT) > 0 ) {
+    rpmname = rpmname + '-' + KERNEL_VARIANT;
+  };
+  rpmname;
+};
+"/software/packages"=pkg_add(PKG_KERNEL_RPM_NAME,KERNEL_VERSION_NUM,PKG_ARCH_KERNEL,"multi");
+"/software/packages"=pkg_repl("kernel-firmware","2.6.32-358.el6","noarch");
 "/software/packages"=pkg_repl("kexec-tools","2.0.0-258.el6","x86_64");
 "/software/packages"=pkg_repl("keyutils-libs","1.4-4.el6","x86_64");
 "/software/packages"=pkg_repl("kpartx","0.4.9-64.el6","x86_64");
@@ -263,7 +271,6 @@ unique template rpms/graphical_admin_tools;
 "/software/packages"=pkg_repl("libhbaapi","2.2.6-1.el6","x86_64");
 "/software/packages"=pkg_repl("libhbalinux","1.0.14-1.el6","x86_64");
 "/software/packages"=pkg_repl("libidn","1.18-2.el6","x86_64");
-"/software/packages"=pkg_repl("libjpeg","6b-46.el6","x86_64");
 "/software/packages"=pkg_repl("libjpeg-turbo","1.2.1-1.el6","x86_64");
 "/software/packages"=pkg_repl("libnih","1.0.1-7.el6","x86_64");
 "/software/packages"=pkg_repl("libnl","1.1-14.el6","x86_64");
@@ -492,7 +499,6 @@ unique template rpms/graphical_admin_tools;
 "/software/packages"=pkg_repl("wpa_supplicant","0.7.3-4.el6_3","x86_64");
 "/software/packages"=pkg_repl("xcb-util","0.3.6-1.el6","x86_64");
 "/software/packages"=pkg_repl("xdg-utils","1.0.2-17.20091016cvs.el6","noarch");
-"/software/packages"=pkg_repl("xinetd","2.3.14-38.el6","x86_64");
 "/software/packages"=pkg_repl("xkeyboard-config","2.6-6.el6","noarch");
 "/software/packages"=pkg_repl("xml-common","0.6.3-32.el6","noarch");
 "/software/packages"=pkg_repl("xmlrpc-c","1.16.24-1209.1840.el6","x86_64");

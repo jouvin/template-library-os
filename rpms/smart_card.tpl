@@ -177,7 +177,6 @@ unique template rpms/smart_card;
 "/software/packages"=pkg_repl("libgweather","2.28.0-5.el6","x86_64");
 "/software/packages"=pkg_repl("libical","0.43-6.el6","x86_64");
 "/software/packages"=pkg_repl("libidn","1.18-2.el6","x86_64");
-"/software/packages"=pkg_repl("libjpeg","6b-46.el6","x86_64");
 "/software/packages"=pkg_repl("libjpeg-turbo","1.2.1-1.el6","x86_64");
 "/software/packages"=pkg_repl("libmcpp","2.7.2-4.1.el6","x86_64");
 "/software/packages"=pkg_repl("libnih","1.0.1-7.el6","x86_64");

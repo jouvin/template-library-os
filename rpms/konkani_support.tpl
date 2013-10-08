@@ -121,7 +121,6 @@ unique template rpms/konkani_support;
 "/software/packages"=pkg_repl("libgpg-error","1.7-4.el6","x86_64");
 "/software/packages"=pkg_repl("libgsf","1.14.15-5.el6","x86_64");
 "/software/packages"=pkg_repl("libgxim","0.3.3-3.1.el6","x86_64");
-"/software/packages"=pkg_repl("libjpeg","6b-46.el6","x86_64");
 "/software/packages"=pkg_repl("libjpeg-turbo","1.2.1-1.el6","x86_64");
 "/software/packages"=pkg_repl("libmcpp","2.7.2-4.1.el6","x86_64");
 "/software/packages"=pkg_repl("libnotify","0.5.0-1.el6","x86_64");

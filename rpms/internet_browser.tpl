@@ -95,7 +95,6 @@ unique template rpms/internet_browser;
 "/software/packages"=pkg_repl("libgpg-error","1.7-4.el6","x86_64");
 "/software/packages"=pkg_repl("libgudev1","147-2.46.el6","x86_64");
 "/software/packages"=pkg_repl("libidn","1.18-2.el6","x86_64");
-"/software/packages"=pkg_repl("libjpeg","6b-46.el6","x86_64");
 "/software/packages"=pkg_repl("libjpeg-turbo","1.2.1-1.el6","x86_64");
 "/software/packages"=pkg_repl("libogg","1.1.4-2.1.el6","x86_64");
 "/software/packages"=pkg_repl("liboil","0.3.16-4.1.el6","x86_64");

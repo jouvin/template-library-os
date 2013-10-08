@@ -13,5 +13,5 @@ include { 'config/os/httpd' };
 '/software/packages' = pkg_del('mod_python');
 
 # Add mod_wsgi (do not reapply errata as this is an add-on)
-'/software/packages' = pkg_repl('mod_wsgi', '3.1-1', PKG_ARCH_DEFAULT);
+'/software/packages' = pkg_repl('mod_wsgi', '3.2-3.el6', PKG_ARCH_DEFAULT);
 

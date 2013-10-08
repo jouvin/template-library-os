@@ -64,8 +64,18 @@ unique template rpms/storage_client_fcoe;
 "/software/packages"=pkg_repl("iputils","20071127-16.el6","x86_64");
 "/software/packages"=pkg_repl("kbd","1.15-11.el6","x86_64");
 "/software/packages"=pkg_repl("kbd-misc","1.15-11.el6","noarch");
-"/software/packages"=pkg_repl("kernel-debug",KERNEL_VERSION_NUM,"x86_64");
-"/software/packages"=pkg_repl("kernel-firmware",KERNEL_VERSION_NUM,"noarch");
+# PKG_KERNEL_NAME can be overridden if not conforming to standard naming scheme
+variable PKG_KERNEL_NAME ?= 'kernel'; 
+# PKG_KERNEL_RPM_NAME can be overridden if not conforming to standard naming scheme
+variable PKG_KERNEL_RPM_NAME ?= {
+  rpmname = PKG_KERNEL_NAME;
+  if ( length(KERNEL_VARIANT) > 0 ) {
+    rpmname = rpmname + '-' + KERNEL_VARIANT;
+  };
+  rpmname;
+};
+"/software/packages"=pkg_add(PKG_KERNEL_RPM_NAME,KERNEL_VERSION_NUM,PKG_ARCH_KERNEL,"multi");
+"/software/packages"=pkg_repl("kernel-firmware","2.6.32-358.el6","noarch");
 "/software/packages"=pkg_repl("keyutils-libs","1.4-4.el6","x86_64");
 "/software/packages"=pkg_repl("kpartx","0.4.9-64.el6","x86_64");
 "/software/packages"=pkg_repl("krb5-libs","1.10.3-10.el6","x86_64");

@@ -68,8 +68,7 @@ variable PKG_KERNEL_RPM_NAME ?= {
   rpmname;
 };
 "/software/packages"=pkg_add(PKG_KERNEL_RPM_NAME,KERNEL_VERSION_NUM,PKG_ARCH_KERNEL,"multi");
-"/software/packages"=pkg_repl("kernel-debug",KERNEL_VERSION_NUM,"x86_64");
-"/software/packages"=pkg_repl("kernel-firmware",KERNEL_VERSION_NUM,"noarch");
+"/software/packages"=pkg_repl("kernel-firmware","2.6.32-358.el6","noarch");
 "/software/packages"=pkg_repl("keyutils-libs","1.4-4.el6","x86_64");
 "/software/packages"=pkg_repl("kmod-openafs","1.6.2-3.SL64.el6","noarch");
 "/software/packages"=pkg_repl("kmod-openafs-358","1.6.2-0.144.sl6.358.0.1","x86_64");

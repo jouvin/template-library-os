@@ -131,7 +131,6 @@ unique template rpms/desktop_debugging;
 "/software/packages"=pkg_repl("libgpg-error","1.7-4.el6","x86_64");
 "/software/packages"=pkg_repl("libgudev1","147-2.46.el6","x86_64");
 "/software/packages"=pkg_repl("libidn","1.18-2.el6","x86_64");
-"/software/packages"=pkg_repl("libjpeg","6b-46.el6","x86_64");
 "/software/packages"=pkg_repl("libjpeg-turbo","1.2.1-1.el6","x86_64");
 "/software/packages"=pkg_repl("libmng","1.0.10-4.1.el6","x86_64");
 "/software/packages"=pkg_repl("libnih","1.0.1-7.el6","x86_64");

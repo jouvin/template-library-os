@@ -114,8 +114,18 @@ unique template rpms/x11;
 "/software/packages"=pkg_repl("jasper-libs","1.900.1-15.el6_1.1","x86_64");
 "/software/packages"=pkg_repl("kbd","1.15-11.el6","x86_64");
 "/software/packages"=pkg_repl("kbd-misc","1.15-11.el6","noarch");
-"/software/packages"=pkg_repl("kernel-debug",KERNEL_VERSION_NUM,"x86_64");
-"/software/packages"=pkg_repl("kernel-firmware",KERNEL_VERSION_NUM,"noarch");
+# PKG_KERNEL_NAME can be overridden if not conforming to standard naming scheme
+variable PKG_KERNEL_NAME ?= 'kernel'; 
+# PKG_KERNEL_RPM_NAME can be overridden if not conforming to standard naming scheme
+variable PKG_KERNEL_RPM_NAME ?= {
+  rpmname = PKG_KERNEL_NAME;
+  if ( length(KERNEL_VARIANT) > 0 ) {
+    rpmname = rpmname + '-' + KERNEL_VARIANT;
+  };
+  rpmname;
+};
+"/software/packages"=pkg_add(PKG_KERNEL_RPM_NAME,KERNEL_VERSION_NUM,PKG_ARCH_KERNEL,"multi");
+"/software/packages"=pkg_repl("kernel-firmware","2.6.32-358.el6","noarch");
 "/software/packages"=pkg_repl("keyutils-libs","1.4-4.el6","x86_64");
 "/software/packages"=pkg_repl("krb5-libs","1.10.3-10.el6","x86_64");
 "/software/packages"=pkg_repl("less","436-10.el6","x86_64");
@@ -170,7 +180,6 @@ unique template rpms/x11;
 "/software/packages"=pkg_repl("libgnomecanvas","2.26.0-4.el6","x86_64");
 "/software/packages"=pkg_repl("libgpg-error","1.7-4.el6","x86_64");
 "/software/packages"=pkg_repl("libidn","1.18-2.el6","x86_64");
-"/software/packages"=pkg_repl("libjpeg","6b-46.el6","x86_64");
 "/software/packages"=pkg_repl("libjpeg-turbo","1.2.1-1.el6","x86_64");
 "/software/packages"=pkg_repl("libmcpp","2.7.2-4.1.el6","x86_64");
 "/software/packages"=pkg_repl("libnih","1.0.1-7.el6","x86_64");

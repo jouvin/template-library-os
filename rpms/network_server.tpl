@@ -7,8 +7,6 @@ unique template rpms/network_server;
 
 
 "/software/packages"=pkg_repl("MAKEDEV","3.24-6.el6","x86_64");
-"/software/packages"=pkg_repl("amanda","2.6.1p2-8.el6","x86_64");
-"/software/packages"=pkg_repl("amanda-client","2.6.1p2-8.el6","x86_64");
 "/software/packages"=pkg_repl("audit-libs","2.2-2.el6","x86_64");
 "/software/packages"=pkg_repl("basesystem","10.0-4.el6","noarch");
 "/software/packages"=pkg_repl("bash","4.1.2-14.el6","x86_64");
@@ -90,7 +88,6 @@ unique template rpms/network_server;
 "/software/packages"=pkg_repl("lm_sensors-libs","3.1.1-17.el6","x86_64");
 "/software/packages"=pkg_repl("logrotate","3.7.8-16.el6","x86_64");
 "/software/packages"=pkg_repl("lua","5.1.4-4.1.el6","x86_64");
-"/software/packages"=pkg_repl("mailx","12.4-6.el6","x86_64");
 "/software/packages"=pkg_repl("mingetty","1.08-5.el6","x86_64");
 "/software/packages"=pkg_repl("module-init-tools","3.9-21.el6","x86_64");
 "/software/packages"=pkg_repl("mtools","4.0.12-1.el6","x86_64");
@@ -141,7 +138,6 @@ unique template rpms/network_server;
 "/software/packages"=pkg_repl("sqlite","3.6.20-1.el6","x86_64");
 "/software/packages"=pkg_repl("syslinux","4.02-8.el6","x86_64");
 "/software/packages"=pkg_repl("sysvinit-tools","2.87-4.dsf.el6","x86_64");
-"/software/packages"=pkg_repl("tar","1.23-11.el6","x86_64");
 "/software/packages"=pkg_repl("tcp_wrappers-libs","7.6-57.el6","x86_64");
 "/software/packages"=pkg_repl("tftp-server","0.49-7.el6","x86_64");
 "/software/packages"=pkg_repl("tzdata","2012j-1.el6","noarch");

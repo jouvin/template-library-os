@@ -64,7 +64,7 @@ unique template rpms/legacy_x;
 "/software/packages"=pkg_repl("libcap-ng","0.6.4-3.el6_0.1","x86_64");
 "/software/packages"=pkg_repl("libfontenc","1.0.5-2.el6","x86_64");
 "/software/packages"=pkg_repl("libgcc","4.4.7-3.el6","x86_64");
-"/software/packages"=pkg_repl("libjpeg","6b-46.el6","x86_64");
+"/software/packages"=pkg_repl("libjpeg-turbo","1.2.1-1.el6","x86_64");
 "/software/packages"=pkg_repl("libmcpp","2.7.2-4.1.el6","x86_64");
 "/software/packages"=pkg_repl("libpng","1.2.49-1.el6_2","x86_64");
 "/software/packages"=pkg_repl("libselinux","2.0.94-5.3.el6","x86_64");

@@ -161,7 +161,6 @@ unique template rpms/input_methods;
 "/software/packages"=pkg_repl("libhangul","0.0.10-1.el6","x86_64");
 "/software/packages"=pkg_repl("libicu","4.2.1-9.1.el6_2","x86_64");
 "/software/packages"=pkg_repl("libidn","1.18-2.el6","x86_64");
-"/software/packages"=pkg_repl("libjpeg","6b-46.el6","x86_64");
 "/software/packages"=pkg_repl("libjpeg-turbo","1.2.1-1.el6","x86_64");
 "/software/packages"=pkg_repl("libmcpp","2.7.2-4.1.el6","x86_64");
 "/software/packages"=pkg_repl("libmng","1.0.10-4.1.el6","x86_64");
